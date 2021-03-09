@@ -16,6 +16,10 @@ def Conv1D(name, input_dim, output_dim, filter_size, inputs, he_init=True, mask_
     returns: tensor of shape (batch size, num channels, width)
     """
     with tf.name_scope(name) as scope:
+        #inserted
+        print(inputs)
+        print(input_dim)
+        print(output_dim)
 
         if mask_type is not None:
             mask_type, mask_n_channels = mask_type
