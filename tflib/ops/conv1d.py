@@ -106,7 +106,7 @@ def Conv1D(name, input_dim, output_dim, filter_size, inputs, he_init=True, mask_
             # result = result + _biases
 
             result = tf.expand_dims(result, 3)
-            result = tf.nn.bias_add(result, _biases, data_format='NCW') #updated from NCHW to NCW
+            result = tf.nn.bias_add(result, _biases, data_format='NCHW') 
             result = tf.squeeze(result)
 
         return result
